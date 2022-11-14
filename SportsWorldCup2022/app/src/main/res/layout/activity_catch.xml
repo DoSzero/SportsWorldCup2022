@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="catchFruits"
+            type="com.ngelgames.her.gamelogic.CatchActivity" />
+        <variable
+            name="score"
+            type="String" />
+        <variable
+            name="time"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".CatchActivity"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@{time}"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="21dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivItem1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@drawable/ball_0" />
+
+            <ImageView
+                android:id="@+id/ivItem2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:srcCompat="@drawable/ball_1" />
+
+            <ImageView
+                android:id="@+id/ivItem3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="2"
+                app:layout_row="0"
+                app:srcCompat="@drawable/ball_2" />
+
+
+            <ImageView
+                android:id="@+id/ivItem4"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@drawable/ball_3" />
+
+            <ImageView
+                android:id="@+id/ivItem5"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="1"
+                app:layout_row="1"
+                app:srcCompat="@drawable/ball_4" />
+
+            <ImageView
+                android:id="@+id/ivItem6"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="2"
+                app:layout_row="1"
+                app:srcCompat="@drawable/ball_5" />
+
+            <ImageView
+                android:id="@+id/ivItem7"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="4dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="0"
+                app:layout_row="2"
+                app:srcCompat="@drawable/ball_6" />
+
+            <ImageView
+                android:id="@+id/ivItem8"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="1"
+                app:layout_row="2"
+                app:srcCompat="@drawable/ball_7" />
+
+            <ImageView
+                android:id="@+id/ivItem9"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/fruit"
+                android:onClick="@{() -> catchFruits.increaseScore()}"
+                app:layout_column="2"
+                app:layout_row="2"
+                app:srcCompat="@drawable/ball_1" />
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@{score}"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="149dp"
+                tools:layout_editor_absoluteY="654dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
