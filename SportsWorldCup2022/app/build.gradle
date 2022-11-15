@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.ngelgames.her"
-        minSdk 23
+        minSdk 24
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -20,12 +20,6 @@ android {
     }
 
     buildTypes {
-        debug{
-            shrinkResources true
-            minifyEnabled true
-            multiDexEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
         release {
             shrinkResources true
             minifyEnabled true
